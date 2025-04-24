@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 2rem;
+}
+
+.about-section {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #ff5c00;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.resume-btn {
+  background-color: #ff5c00;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #e65100;
+}
+
+.about-image {
+  max-width: 300px;
+  height: auto;
+}
+
+.divider {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid #555;
+}
+
+.skills-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skill-category {
+  flex: 1;
+  min-width: 200px;
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.shape {
+  display: inline-block;
+  background-color: #ff5c00;
+  margin-right: 0.5rem;
+}
+
+.diamond {
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+}
+
+.square {
+  width: 12px;
+  height: 12px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-section {
+    padding: 20px;
+  }
+
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    margin-bottom: 30px;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .skills-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .skill-category {
+    width: 100%;
+  }
+}

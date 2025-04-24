@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="contact.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/my-logo.png" alt="My Logo" width="100">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="portfolio.html">Portfolio</a></li> 
+        <li><a href="about me.html">About</a></li> 
+        <li><a href="contact.html">Contact</a></li> 
+        <li><img src="assets/email-icon.png" alt="Email" width="20"></a></li> 
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="contact-container">
+    <div class="contact-text">
+      <h1>
+        I'm always interested<br>
+        in hearing about new<br>
+        projects, so if you'd<br>
+        like to chat please<br>
+        <strong>get in touch.</strong>
+      </h1>
+    </div>
+
+  <form class="contact-form" onsubmit="openGmail(event)">
+      <div class="form-row">
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+      </div>
+
+      <input type="email" id="email" placeholder="Email address" required>
+
+    <textarea id="message" rows="5" placeholder="Write me something..." required></textarea>
+
+       <button type="submit">Get in touch</button>
+    </form>
+  </main>
+
+   <footer class="footer-icons">
+    <a href="https://github.com/EviveSkiless2003" target="_blank"><img src="assets/github-icon.png" alt="GitHub" width="20"></a>
+    <a href="https://www.linkedin.com/in/mikias-tereda-044b53356/" target="_blank"><img src="assets/linkedin-icon.png" alt="LinkedIn" width="20"></a>
+    <a href="https://x.com/mikias_ter95313" target="_blank"><img src="assets/twitter-icon.png" alt="Twitter" width="20"></a>
+    <a href="https://medium.com/@teredamikias054" target="_blank"><img src="assets/medium-icon.png" alt="Medium" width="20"></a>
+  </footer>
+
+  <script>
+    function openGmail(event) {
+      event.preventDefault();
+      
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+       const body = `From: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`;
+      
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=teredamikias054@gmail.com&su=Contact from ${firstName} ${lastName}&body=${encodeURIComponent(body)}`;
+      
+      window.open(gmailUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
